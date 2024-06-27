@@ -6,6 +6,6 @@ def lambda_handler(event, context):
         "statusCode": 200,
         "body": "{'Test': 'Test'}",
         "headers": {
-            'Content-Type': 'text/html',
+            'Content-Type': 'application/json',
         }
     }
