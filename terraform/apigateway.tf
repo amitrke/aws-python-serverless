@@ -1,4 +1,4 @@
-resource "aws_api_gateway_rest_api" "this {
+resource "aws_api_gateway_rest_api" "this" {
   name = var.api_name
 }
 
@@ -55,5 +55,5 @@ resource "aws_api_gateway_stage" "this" {
 
 resource "aws_cloudwatch_log_group" "this" {
   name              = "API-Gateway-Execution-Logs_${aws_api_gateway_rest_api.this.id}/${var.stage_name}"
-  retention_in_days = 2
+  retention_in_days = 1
 }
